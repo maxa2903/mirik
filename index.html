@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DutyWorld — Магазин привилегий</title>
+  <meta name="description" content="DutyWorld — Minecraft-сервер во вселенной героев. Привилегии, кейсы и услуги. IP: DutyWorld.aternos.me">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/logo-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="home">
+  <header id="header"></header>
+
+  <main class="container">
+    <!-- ───── Слайдер ───── -->
+    <section class="hero">
+      <div class="slider" id="slider">
+        <div class="slide active" data-hero="spiderman" data-anim="walk">
+          <div class="slide-bg bg-1"></div>
+          <div class="slide-content">
+            <h1>DutyWorld — начало эры героев</h1>
+            <p>Открой огромный мир, полный приключений, сражений и новых друзей. Стань героем своей вселенной!</p>
+            <div class="actions">
+              <button class="btn btn-light" data-copy-ip>Играть сейчас <span style="opacity:.6" data-ip></span></button>
+              <a class="btn btn-dark" href="play.html">Как зайти?</a>
+            </div>
+          </div>
+        </div>
+        <div class="slide" data-hero="ironman" data-anim="idle">
+          <div class="slide-bg bg-2"></div>
+          <div class="slide-content">
+            <h2>Магазин доната</h2>
+            <p>Привилегии, кейсы и услуги. Прокачай свой аккаунт прямо сейчас!</p>
+            <div class="actions"><a class="btn btn-dark" href="#shop">Перейти в магазин <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+          </div>
+        </div>
+        <div class="slide" data-hero="hulk" data-anim="run">
+          <div class="slide-bg bg-3"></div>
+          <div class="slide-content">
+            <h2>Не знаешь, как зайти?</h2>
+            <p>Всего 3 простых шага — и ты уже на сервере!</p>
+            <div class="actions"><a class="btn btn-dark" href="play.html">Смотреть инструкцию</a></div>
+          </div>
+        </div>
+        <div class="slide" data-hero="black-panther" data-anim="crouch">
+          <div class="slide-bg bg-5"></div>
+          <div class="slide-content">
+            <h2>Защити свой аккаунт</h2>
+            <p>Надёжный пароль и правила безопасности — и никто не уведёт твой ник, донат и постройки!</p>
+            <div class="actions"><a class="btn btn-dark" href="play.html#security">Как защитить?</a></div>
+          </div>
+        </div>
+        <div class="slide" data-hero="thor" data-anim="wave">
+          <div class="slide-bg bg-4"></div>
+          <div class="slide-content">
+            <h2>Вступай в команду</h2>
+            <p>Открыт набор в состав проекта — помогай игрокам и следи за порядком на сервере.</p>
+            <div class="actions"><a class="btn btn-dark" href="staff.html">Подать заявку <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10" cy="8" r="4"/><path d="M2 21a8 8 0 0 1 16 0M19 8v6M16 11h6"/></svg></a></div>
+          </div>
+        </div>
+        <div class="slider-hero" id="slider-hero"></div>
+        <div class="hero-name" id="hero-name"></div>
+        <div class="dots" id="dots"></div>
+      </div>
+    </section>
+
+    <!-- ───── Начни путь + кейсы с валютой ───── -->
+    <section class="quick">
+      <div class="start">
+        <div>
+          <div class="badge-row"><span class="badge" data-versions></span><a class="link-muted" href="play.html">Как зайти?</a></div>
+          <h3>Начни путь к вершине прямо сейчас!</h3>
+          <div class="ip-box"><span data-ip></span><button data-copy-ip aria-label="Скопировать IP"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button></div>
+        </div>
+        <div class="start-hero" data-skin="spiderman" data-anim="wave" data-zoom="0.85" data-rot="0.5"></div>
+      </div>
+
+      <div class="case-buy" id="case-buy">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="7" rx="8" ry="3.5"/><path d="M4 7v5c0 1.9 3.6 3.5 8 3.5s8-1.6 8-3.5V7M4 12v5c0 1.9 3.6 3.5 8 3.5s8-1.6 8-3.5v-5"/></svg>Покупка кейсов с валютой</h3>
+        <div class="range-row"><span>Выберите количество кейсов</span><b data-cb-qty>5</b></div>
+        <input type="range" min="1" max="100" value="5" data-cb-range aria-label="Количество кейсов">
+        <div class="chips" data-cb-chips></div>
+        <div class="case-buy-foot">
+          <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+            <span class="pill" data-cb-sum></span>
+            <span class="pill"><span data-cb-qty>5</span> <small>кейсов</small></span>
+          </div>
+          <button class="btn btn-primary" data-cb-buy>Купить кейсы <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 10.2a2 2 0 0 0 2 1.6h7.4a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───── Магазин ───── -->
+    <section class="section" id="shop">
+      <h2 class="section-title">Магазин доната</h2>
+      <div class="ticker" id="ticker" hidden>
+        <span class="ticker-label">Недавно купили</span>
+        <div class="ticker-track" id="ticker-track"></div>
+      </div>
+      <div class="shop">
+        <div class="tabs" id="tabs"></div>
+        <div class="products" id="products"></div>
+      </div>
+    </section>
+
+    <!-- ───── Герои ───── -->
+    <section class="section" id="heroes">
+      <h2 class="section-title">Герои DutyWorld</h2>
+      <p class="section-sub">Персонажи нашей вселенной. Нажми на героя, а модель можно покрутить мышкой.</p>
+      <div class="heroes">
+        <div class="heroes-stage" id="stage" data-skin="spiderman" data-anim="idle" data-zoom="0.8" data-rot="-0.35" data-drag="1" data-manual>
+          <div class="stage-name"><b id="stage-name"></b><span id="stage-role"></span></div>
+        </div>
+        <div class="hero-list" id="hero-list"></div>
+      </div>
+    </section>
+
+    <!-- ───── Полезное ───── -->
+    <section class="section">
+      <div class="info-grid">
+        <div class="info-card"><h4>Описание привилегий</h4><p>Что даёт каждая привилегия, кейс и услуга.</p><a href="description.html">Открыть →</a></div>
+        <div class="info-card"><h4>Правила сервера</h4><p>Ознакомься с правилами, чтобы играть без наказаний.</p><a href="doc.html?d=rules">Читать →</a></div>
+        <div class="info-card"><h4>Способы оплаты</h4><p>Как оплатить донат и когда он будет выдан.</p><a href="payments.html">Подробнее →</a></div>
+        <div class="info-card"><h4>Поддержка</h4><p>Вопросы по донату, жалобы и апелляции.</p><a href="support.html">Связаться →</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer"></footer>
+
+  <script src="assets/vendor/skinview3d.bundle.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/home.js"></script>
+</body>
+</html>
